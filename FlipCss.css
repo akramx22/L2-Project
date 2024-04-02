@@ -177,7 +177,7 @@ body{
     top: 67.5%;
 }
 
-.inputs button{
+.inputs button,.send{
     font-family: "Poppins",sans-serif;
     align-self: center;
     background-color: rgb(18, 18, 18);
@@ -194,7 +194,7 @@ body{
     border: none;
 }
 
-.inputs button:hover{
+.inputs button:hover,.send:hover{
     box-shadow: 0 0 12px 2px rgb(0, 234, 255);
     outline: none;
     border: none;
