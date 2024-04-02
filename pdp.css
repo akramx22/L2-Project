@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Readex+Pro:wght@160..700&display=swap');
+
+*{
+    box-sizing:border-box;
+    font-family: "Montserrat",sans-serif;
+}
+
+
+body{
+    height: 100vh;
+    padding: 3vh 3%;
+    margin: 0;
+    background-image: url("adddddddd3145619_n.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:5vh;
+}
+
+.navbar{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    justify-self: flex-start;
+}
+
+.home,.help{
+    font-size: 1.7rem;
+    color: white;
+    background-color: transparent;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s linear;
+}
+
+
+.home:hover,.help:hover{
+    box-shadow: 0 0 12px 3px rgb(0, 234, 255);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.parts{
+    text-transform: uppercase;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    font-size: clamp(16px,1.3rem,40px);
+    font-weight: 700;
+    color: rgb(169, 248, 255);
+}
+
+.parts button{
+    text-transform: uppercase;
+    font-size: clamp(16px,1.3rem,40px);
+    font-weight: 700;
+    color: rgb(115, 243, 255);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 1.5s;
+    opacity: 0;
+}
+
+
+.container{
+    min-height: 487.5px;
+    width:480px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.all{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color:rgb(0, 0, 0);
+    border-radius: 15px;
+    box-shadow: 1px 1px 20px 2px rgb(0, 193, 211);
+    transition: all .4s ease;
+}
+
+.card-pdp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6vh 7%;
+    width: 100%;
+    gap: 3vh;
+}
+
+.title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: "Poppins",sans-serif;
+    color: white;
+    font-size: clamp(30px,2.5vw + 0.5rem,70px);
+    font-weight: 600;
+    transition: all 0.4s ease;
+}
+
+.select{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    transition: all 0.5s;
+}
+
+#unknown{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.select:hover{
+    transform:scale(1.05);
+}
+
+input{
+    display: none;
+}
+
+
+.all:hover{
+    box-shadow: 1px 1px 20px 4px rgb(0, 234, 255);
+}
+
+.card-pdp:hover .title{
+    text-shadow: 0px 0px 10px rgb(0, 193, 211);
+}
+
+.buttons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.buttons button{
+    font-family: "Poppins",sans-serif;
+    align-self: center;
+    background-color: rgb(18, 18, 18);
+    color: white;
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+    padding: 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s ease;
+    outline: none;
+    border: none;
+    margin-top: 10px;
+}
+
+.buttons button:hover{
+    box-shadow: 0 0 12px 2px rgb(0, 234, 255);
+    outline: none;
+    border: none;
+    font-size: 1.25rem;
+}
