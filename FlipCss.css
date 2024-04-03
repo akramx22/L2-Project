@@ -10,8 +10,12 @@ body{
     height: 100vh;
     padding: 3vh 3%;
     margin: 0;
-    background-image: url("adddddddd3145619_n.jpg");
+    background-image: url(max-harlynking-CDLBz2lPpLM-unsplash.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    backdrop-filter: blur(2px) saturate(120%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,7 +47,6 @@ body{
 
 
 .home:hover,.help:hover{
-    box-shadow: 0 0 12px 3px rgb(0, 234, 255);
     transform: scale(1.05);
     cursor: pointer;
 }
@@ -72,22 +75,22 @@ body{
     position: relative;
     background-color:rgb(0, 0, 0);
     border-radius: 15px;
-    box-shadow: 1px 1px 20px 2px rgb(0, 193, 211);
+    box-shadow: 1px 1px 20px 3px rgb(29, 29, 29);
     transition: all 1.5s;
     transform-style: preserve-3d;
 }
 
 .flip-card:hover{
-    box-shadow: 1px 1px 20px 4px rgb(0, 234, 255);
+    box-shadow: 1px 1px 20px 6px rgb(0, 0, 0);
     transition: all .4s ease;
 }
 
 .login:hover .title{
-    text-shadow: 0px 0px 10px rgb(0, 193, 211);
+    text-shadow: 5px 10px 15px rgb(61, 61, 61);
 }
 
 .signup:hover .title{
-    text-shadow: 0px 0px 10px rgb(0, 193, 211);
+    text-shadow: 5px 10px 15px rgb(61, 61, 61);
 }
 
 
@@ -136,8 +139,8 @@ body{
 
 .email,.pass,.age{
     width: 100%;
-    background-color: rgb(18, 18, 18);
-    color: rgb(185, 185, 185);
+    background-color: rgb(255, 255, 255);
+    color: rgb(117, 117, 117);
     border: 2px solid rgb(18, 18, 18);
     border-radius: 10px;
     padding: 5px 5px 5px 40px;
@@ -152,7 +155,7 @@ body{
 }
 
 .email:focus,.pass:focus,select:focus,.age:focus{
-    box-shadow: 0 0 12px 2px rgb(0, 234, 255);
+    box-shadow: 0 0 10px 1px rgb(255, 251, 174);
     outline: none;
     border: none;
 }
@@ -164,7 +167,7 @@ body{
 
 .mail-icon,.lock-icon,.old{
     position: absolute;
-    color: rgb(185, 185, 185);
+    color: rgb(117, 117, 117);
     font-size: 1.4rem;
     left: 2.5%;
 }
@@ -180,7 +183,8 @@ body{
 .inputs button,.send{
     font-family: "Poppins",sans-serif;
     align-self: center;
-    background-color: rgb(18, 18, 18);
+    background-color: transparent;
+    border: 3px solid white;
     color: white;
     width: 150px;
     height: 50px;
@@ -191,13 +195,11 @@ body{
     cursor: pointer;
     transition: 0.5s ease;
     outline: none;
-    border: none;
 }
 
 .inputs button:hover,.send:hover{
-    box-shadow: 0 0 12px 2px rgb(0, 234, 255);
+    box-shadow: 0 0 8px 1px rgb(211, 211, 211);
     outline: none;
-    border: none;
     font-size: 1.25rem;
 }
 
@@ -210,7 +212,7 @@ body{
 }
 
 .go-sign:hover{
-    color: rgba(0, 193, 211, 0.888);
+    color: rgba(255, 255, 255, 0.888);
 }
 
 .signup{
@@ -242,7 +244,8 @@ body{
     background-color: rgb(18, 18, 18);
     font-size: 1rem;
     font-weight: 500;
-    color: rgba(185, 185, 185, 0.564);
+    color: rgb(117, 117, 117);
+    cursor: pointer;
 }
 
 .old,.down{
@@ -258,6 +261,8 @@ body{
 
 .down{
     left: 54%;
+    cursor: pointer;
+    pointer-events: none;
 }
 
 
@@ -270,14 +275,14 @@ body{
     justify-content: space-between;
     font-size: clamp(16px,1.3rem,40px);
     font-weight: 700;
-    color: rgb(169, 248, 255);
+    color: rgb(255, 255, 255);
 }
 
 .parts button{
     text-transform: uppercase;
     font-size: clamp(16px,1.3rem,40px);
     font-weight: 700;
-    color: rgb(115, 243, 255);
+    color: rgb(255, 255, 255);
     background-color: transparent;
     border: none;
     outline: none;
@@ -286,7 +291,7 @@ body{
 }
 
 .sign{
-    opacity: 0.7;
+    opacity: 0.5;
 }
 
 

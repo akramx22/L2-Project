@@ -10,8 +10,12 @@ body{
     height: 100vh;
     padding: 3vh 3%;
     margin: 0;
-    background-image: url("adddddddd3145619_n.jpg");
+    background-image: url(max-harlynking-CDLBz2lPpLM-unsplash.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    backdrop-filter: blur(2px) saturate(120%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,7 +47,6 @@ body{
 
 
 .home:hover,.help:hover{
-    box-shadow: 0 0 12px 3px rgb(0, 234, 255);
     transform: scale(1.05);
     cursor: pointer;
 }
@@ -89,7 +92,7 @@ body{
     justify-content: center;
     background-color:rgb(0, 0, 0);
     border-radius: 15px;
-    box-shadow: 1px 1px 20px 2px rgb(0, 193, 211);
+    box-shadow: 1px 1px 20px 3px rgb(29, 29, 29);
     transition: all .4s ease;
 }
 
@@ -142,11 +145,11 @@ input{
 
 
 .all:hover{
-    box-shadow: 1px 1px 20px 4px rgb(0, 234, 255);
+    box-shadow: 1px 1px 20px 6px rgb(0, 0, 0);
 }
 
 .card-pdp:hover .title{
-    text-shadow: 0px 0px 10px rgb(0, 193, 211);
+    text-shadow: 5px 10px 15px rgb(61, 61, 61);
 }
 
 .buttons{
@@ -160,7 +163,8 @@ input{
 .buttons button{
     font-family: "Poppins",sans-serif;
     align-self: center;
-    background-color: rgb(18, 18, 18);
+    background-color: transparent;
+    border: 3px solid white;
     color: white;
     width: 150px;
     height: 50px;
@@ -171,13 +175,11 @@ input{
     cursor: pointer;
     transition: 0.5s ease;
     outline: none;
-    border: none;
     margin-top: 10px;
 }
 
 .buttons button:hover{
-    box-shadow: 0 0 12px 2px rgb(0, 234, 255);
+    box-shadow: 0 0 8px 1px rgb(211, 211, 211);
     outline: none;
-    border: none;
     font-size: 1.25rem;
 }
