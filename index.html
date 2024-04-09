@@ -3,84 +3,886 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="FlipCss.css"/>
+    <link rel="stylesheet" href="home.css"/>
+    
     <title>Wearex</title>
 </head>
 <body>
-    <div class="navbar">
-        <button class="home"><ion-icon name="home-outline"></ion-icon></button>
-        <button class="help"><ion-icon name="help-outline"></ion-icon></button>
-    </div>
-    <div class="parts">
-        <button class="log">Log In</button>
-        <button class="sign">Sign Up</button>
-    </div>
-     <div class="card">
-        <div class="flip-card">
-            <div class="login">
-                <div class="title">Welcome Again!</div>
-                <form class="inputs">
-                    <div class="informations">
-                        <span class="mail-icon"><ion-icon name="mail-outline"></ion-icon></ion-icon></span>
-                        <input type="email" class="email" placeholder="Email" required autocomplete="off"/>
-                        <span class="lock-icon"><ion-icon name="lock-closed-outline" class="lock"></ion-icon></span>
-                        <input type="password" class="pass" placeholder="Password" required/>
-                    </div>
-                    <button type="submit">Log In</button>
-                </form>
-                <a href="#" class="go-sign">Forget your password ?</a>
+    <div class="contacts-wearex" id="contactPopup">
+    <button class="hide" onclick="contactToggle()"><i class="fa-solid fa-xmark"></i></button>
+        <div class="email-contact">wearexpro@gmail.com</div>
+        <div class="social">
+            <a><i class="fa-brands fa-instagram" id="sm"></i></a>
+            <a><i class="fa-brands fa-facebook" id="sm"></i></a>
+            <a><i class="fa-brands fa-twitter" id="sm"></i></a>
+            <a><i class="fa-brands fa-tiktok" id="sm"></i></a>
+        </div>
+        <div class="call-us">
+            <div class="call-contact">
+                <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="number-contact">0557 66 03 37</div>
             </div>
-            <div class="signup">
-                <div class="title">Create Account</div>
-                <form class="inputs" action="pdp.html">
-                    <div class="informations">
-                        <div class="important">
-                            <span class="mail-icon"><ion-icon name="mail-outline"></ion-icon></ion-icon></span>
-                            <input type="email" class="email" placeholder="Email" required autocomplete="off"/>
-                            <span class="lock-icon"><ion-icon name="lock-closed-outline" class="lock"></ion-icon></span>
-                            <input type="password" class="pass" placeholder="Password" required/>
-                        </div>
-                        <div class="other">
-                            <span class="old"><ion-icon name="person-outline"></ion-icon></span>
-                            <span class="down"><ion-icon name="chevron-down-outline"></ion-icon></span>
-                            <input type="text" class="age" placeholder="Age" required autocomplete="off"/>
-                            <div class="country">
-                                <select>
-                                    <option selected hidden>Country</option>
-                                    <option>Us</option>
-                                    <option>Uk</option>
-                                    <option>France</option>
-                                    <option>Egypt</option>
-                                    <option>Algeria</option>
-                                    <option>Colombia</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <input type="submit" class="send" value="Next"/>
-                </form>
+            <div class="call-contact">
+                <div class="contact-icon"><i class="fa-solid fa-fax"></i></div>
+                <div class="number-contact">0254 42 99 31</div>
+            </div>
+        </div>            
+        </div>
+    </div>
+
+    <div class="card-account" id="AccPopup">
+        <div class="details-account">
+            <div class="identity-account">
+                <div class="pic-pdp">
+                    <img class="pdp-unknown" src="0766d183119ff92920403eb7ae566a85-removebg-preview.png">  
+                </div>
+                <div class="ligne8"></div>
+            </div>
+            <div class="title10">My Account</div>
+        </div>
+        <div class="user">
+            <div class="database">
+                <div class="type">Email : </div>
+                <div class="data">Unknown@gmail.com</div>
+            </div>
+            <div class="database">
+                <div class="type">Age : </div>
+                <div class="data">Unknown</div>
+            </div>
+            <div class="database">
+                <div class="type">Country : </div>
+                <div class="data">Unknown</div>
             </div>
         </div>
-     </div>
+        <div class="buttons-account">
+            <button class="change">Edit</button>
+            <button class="change" onclick="accToggle()">Close</button>
+        </div>
+    </div>
+
+    <div class="container" id="popup">
+        <div class="card-container">
+            <button class="close" onclick="toggle()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="front">
+                <div class="image">
+                    <img src="chip.png" alt="">
+                    <img src="visa.png" alt="">
+                </div>
+                <div class="card-number-box">################</div>
+                <div class="flexbox">
+                    <div class="box">
+                        <span>card holder</span>
+                        <div class="card-holder-name">full name</div>
+                    </div>
+                    <div class="box">
+                        <span>expires</span>
+                        <div class="expiration">
+                            <span class="exp-month">mm</span>
+                            <span class="exp-year">yy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="back">
+                <div class="stripe"></div>
+                <div class="box">
+                    <span>cvv</span>
+                    <div class="cvv-box"></div>
+                    <img src="image/visa.png" alt="">
+                </div>
+            </div>
+    
+        </div>
+    
+        <form action="#products">
+            <div class="inputBox">
+                <span>card number</span>
+                <input type="text" maxlength="16" class="card-number-input">
+            </div>
+            <div class="inputBox">
+                <span>card holder</span>
+                <input type="text" class="card-holder-input">
+            </div>
+            <div class="flexbox">
+                <div class="inputBox">
+                    <span>expiration mm</span>
+                    <select name="" id="" class="month-input" >
+                        <option value="month" selected disabled>month</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+                <div class="inputBox">
+                    <span>expiration yy</span>
+                    <select name="" id="" class="year-input" >
+                        <option value="year" selected disabled>year</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                    </select>
+                </div>
+                <div class="inputBox">
+                    <span>cvv</span>
+                    <input type="text" maxlength="4" class="cvv-input">
+                </div>
+            </div>
+            <button class="submit-btn" onclick="toggle()">SUBMIT</button>
+        </form>
+    </div>
+    
+    <div class="hole-website" id="blur">
+    <div class="welcome">
+        <div class="navbar">
+            <div class="name-website">Wearex</div> 
+            <div class="items">
+                <a href="home.html" class="first">Home</a>
+                <a href="#products">Products</a>
+                <a href="#" onclick="contactToggle()">Contact</a>
+                <a href="#">Help Center</a>
+            </div>
+            <button class="profile" onclick="accToggle()"><img src="0766d183119ff92920403eb7ae566a85-removebg-preview.png" class="profile-pic"/></button>
+        </div>
+        <div class="other">
+            <div class="text">
+                <div class="header">Here, Where you can wear your thoughts.</div>
+                <div class="desc">Have you ever think about wearing exactly what you think and feel ? You're in the right place then.</div>
+            </div>
+            <div class="buttons">
+                <button>Register</button>
+                <button><a href="#subs">Subscribe</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="unique reveal">
+        <div class="title">Why Wearex ?</div>
+        <div class="special">
+            <div class="same">
+            <img class="cover" src="toa-heftiba-uLOoeEYhLSc-unsplash.jpg">
+                <div class="show">
+                    <div class="why">High Quality</div>
+                    <div class="text1">100% Coton, perfect broderie and DTF printing and review by experts.</div>
+                </div>
+            </div>
+            <div class="same">
+            <img class="cover" src="cardmapr-nl-i-t4zL1Nqc0-unsplash.jpg">
+                <div class="show">
+                    <div class="why">Acceptable Price</div>
+                    <div class="text1">Our prices are between 14$ and 28$ which is acceptable for most people around the world.</div>
+                </div>
+            </div>
+            <div class="same">
+            <img class="cover" src="sven-ciupka-RavbKCbzlXY-unsplash.jpg">
+                <div class="show">
+                    <div class="why">Unique Design</div>
+                    <div class="text1">Why always just a logo ? let's make design more creative and special.</div>
+                </div>
+            </div>
+            <div class="same">
+            <img class="cover" src="kazem-hussein-Kq1ERpkH0eQ-unsplash.jpg">
+                <div class="show">
+                    <div class="why">Fast Delivery</div>
+                    <div class="text1">You won't wait a lot, one day or two and you'll get your masterpiece.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="winter-products reveal" id="products">
+        <div class="about1">
+            <div class="title2">Winter Drop</div>
+            <div class="filtration">
+                <ion-icon name="filter" class="filt"></ion-icon>
+                <select id="choice" onchange="filter()">
+                    <option selected hidden>Filter..</option>
+                    <option value="1">All</option>
+                    <option value="2">High Rated</option>
+                    <option value="3">Latest Drop</option>
+                    <option value="4">Most Buy</option>
+                </select>
+            </div>
+        </div>
+        <div class="scroller begin">
+        <i class="fa-solid fa-angle-left" id="prevProduct"></i>
+            <div class="inner-scroller first">
+                <div class="product-card" id="prod1">
+                    <div class="details1">
+                        <div class="name-product">NFT Hoodie</div>
+                        <div class="want">
+                            <div class="product-price">24.99$</div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            </div>
+                        </div>
+                        <div class="sizes">
+                            <button>S</button>
+                            <button>M</button>
+                            <button>L</button>
+                            <button>XL</button>
+                            <button>2XL</button>
+                        </div>
+                        <div class="buy">
+                            <button class="favor"><ion-icon name="heart-outline"></ion-icon></button>
+                            <button class="add" onclick="toggle()">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" id="prod2">
+                    <div class="details1">
+                        <div class="name-product">Beige Hoodie</div>
+                        <div class="want">
+                            <div class="product-price">28.99$</div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            </div>
+                        </div>
+                        <div class="sizes">
+                            <button>S</button>
+                            <button>M</button>
+                            <button>L</button>
+                            <button>XL</button>
+                            <button>2XL</button>
+                        </div>
+                        <div class="buy">
+                            <button class="favor"><ion-icon name="heart-outline"></ion-icon></button>
+                            <button class="add" onclick="toggle()">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" id="prod3">
+                    <div class="details1">
+                        <div class="name-product">Audere Hoddie</div>
+                        <div class="want">
+                            <div class="product-price">21.99$</div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
+                            </div>
+                        </div>
+                        <div class="sizes">
+                            <button>S</button>
+                            <button>M</button>
+                            <button>L</button>
+                            <button>XL</button>
+                            <button>2XL</button>
+                        </div>
+                        <div class="buy">
+                            <button class="favor"><ion-icon name="heart-outline"></ion-icon></button>
+                            <button class="add" onclick="toggle()">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" id="prod4">
+                    <div class="details1">
+                        <div class="name-product">Epic Hoodie</div>
+                        <div class="want">
+                            <div class="product-price">28.99$</div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            </div>
+                        </div>
+                        <div class="sizes">
+                            <button>S</button>
+                            <button>M</button>
+                            <button>L</button>
+                            <button>XL</button>
+                            <button>2XL</button>
+                        </div>
+                        <div class="buy">
+                            <button class="favor"><ion-icon name="heart-outline"></ion-icon></button>
+                            <button class="add" onclick="toggle()">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" id="prod5">
+                    <div class="details1">
+                        <div class="name-product">VYL Vest</div>
+                        <div class="want">
+                            <div class="product-price">28.99$</div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            </div>
+                        </div>
+                        <div class="sizes">
+                            <button>S</button>
+                            <button>M</button>
+                            <button>L</button>
+                            <button>XL</button>
+                            <button>2XL</button>
+                        </div>
+                        <div class="buy">
+                            <button class="favor"><ion-icon name="heart-outline"></ion-icon></button>
+                            <button class="add" onclick="toggle()">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" id="prod6">
+                    <div class="details1">
+                        <div class="name-product">Beast Hoodie</div>
+                        <div class="want">
+                            <div class="product-price">23.99$</div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
+                            </div>
+                        </div>
+                        <div class="sizes">
+                            <button>S</button>
+                            <button>M</button>
+                            <button>L</button>
+                            <button>XL</button>
+                            <button>2XL</button>
+                        </div>
+                        <div class="buy">
+                            <button class="favor"><ion-icon name="heart-outline"></ion-icon></button>
+                            <button class="add" onclick="toggle()">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" id="prod7">
+                    <div class="details1">
+                        <div class="name-product">Dark Hoodie</div>
+                        <div class="want">
+                            <div class="product-price">27.99$</div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            </div>
+                        </div>
+                        <div class="sizes">
+                            <button>S</button>
+                            <button>M</button>
+                            <button>L</button>
+                            <button>XL</button>
+                            <button>2XL</button>
+                        </div>
+                        <div class="buy">
+                            <button class="favor"><ion-icon name="heart-outline"></ion-icon></button>
+                            <button class="add" onclick="toggle()">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" id="prod8">
+                    <div class="details1">
+                        <div class="name-product">RWT Vest</div>
+                        <div class="want">
+                            <div class="product-price">26.99$</div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            </div>
+                        </div>
+                        <div class="sizes">
+                            <button>S</button>
+                            <button>M</button>
+                            <button>L</button>
+                            <button>XL</button>
+                            <button>2XL</button>
+                        </div>
+                        <div class="buy">
+                            <button class="favor"><ion-icon name="heart-outline"></ion-icon></button>
+                            <button class="add" onclick="toggle()">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <i class="fa-solid fa-angle-right" id="nextProduct"></i>
+        </div>
+    </div>
+    <div class="summer-products reveal">
+        <div class="about1">
+            <div class="title2">Summer Drop</div>
+            <div class="filtration">
+                <ion-icon name="filter" class="filt"></ion-icon>
+                <select id="choose" onchange="filter2()">
+                    <option selected hidden>Filter..</option>
+                    <option value="1">All</option>
+                    <option value="2">High Rated</option>
+                    <option value="3">Latest Drop</option>
+                    <option value="4">Most Buy</option>
+                </select>
+            </div>
+        </div>
+        <div class="scroller end">
+        <i class="fa-solid fa-angle-left" id="prevProduct"></i>
+            <div class="inner-scroller second">
+                <div class="product-card" id="prod9">
+                    <div class="details1">
+                        <div class="name-product">OP Shirt</div>
+                        <div class="want">
+                            <div class="product-price">24.99$</div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            </div>
+                        </div>
+                        <div class="sizes">
+                            <button>S</button>
+                            <button>M</button>
+                            <button>L</button>
+                            <button>XL</button>
+                            <button>2XL</button>
+                        </div>
+                        <div class="buy">
+                            <button class="favor"><ion-icon name="heart-outline"></ion-icon></button>
+                            <button class="add" onclick="toggle()">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" id="prod10">
+                    <div class="details1">
+                        <div class="name-product">White Shirt</div>
+                        <div class="want">
+                            <div class="product-price">19.99$</div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
+                            </div>
+                        </div>
+                        <div class="sizes">
+                            <button>S</button>
+                            <button>M</button>
+                            <button>L</button>
+                            <button>XL</button>
+                            <button>2XL</button>
+                        </div>
+                        <div class="buy">
+                            <button class="favor"><ion-icon name="heart-outline"></ion-icon></button>
+                            <button class="add" onclick="toggle()">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" id="prod11">
+                    <div class="details1">
+                        <div class="name-product">Black Shirt</div>
+                        <div class="want">
+                            <div class="product-price">19.99$</div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
+                            </div>
+                        </div>
+                        <div class="sizes">
+                            <button>S</button>
+                            <button>M</button>
+                            <button>L</button>
+                            <button>XL</button>
+                            <button>2XL</button>
+                        </div>
+                        <div class="buy">
+                            <button class="favor"><ion-icon name="heart-outline"></ion-icon></button>
+                            <button class="add" onclick="toggle()">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" id="prod12">
+                    <div class="details1">
+                        <div class="name-product">LSK Shirt</div>
+                        <div class="want">
+                            <div class="product-price">22.99$</div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            </div>
+                        </div>
+                        <div class="sizes">
+                            <button>S</button>
+                            <button>M</button>
+                            <button>L</button>
+                            <button>XL</button>
+                            <button>2XL</button>
+                        </div>
+                        <div class="buy">
+                            <button class="favor"><ion-icon name="heart-outline"></ion-icon></button>
+                            <button class="add" onclick="toggle()">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" id="prod13">
+                    <div class="details1">
+                        <div class="name-product">Magma Shirt</div>
+                        <div class="want">
+                            <div class="product-price">25.99$</div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            </div>
+                        </div>
+                        <div class="sizes">
+                            <button>S</button>
+                            <button>M</button>
+                            <button>L</button>
+                            <button>XL</button>
+                            <button>2XL</button>
+                        </div>
+                        <div class="buy">
+                            <button class="favor"><ion-icon name="heart-outline"></ion-icon></button>
+                            <button class="add" onclick="toggle()">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" id="prod14">
+                    <div class="details1">
+                        <div class="name-product">Wild Shirt</div>
+                        <div class="want">
+                            <div class="product-price">21.99$</div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
+                            </div>
+                        </div>
+                        <div class="sizes">
+                            <button>S</button>
+                            <button>M</button>
+                            <button>L</button>
+                            <button>XL</button>
+                            <button>2XL</button>
+                        </div>
+                        <div class="buy">
+                            <button class="favor"><ion-icon name="heart-outline"></ion-icon></button>
+                            <button class="add" onclick="toggle()">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <i class="fa-solid fa-angle-right" id="nextProduct"></i>
+        </div>
+    </div>
+    <div class="subscriptions" id="subs">
+        <div class="title3">Subscriptions</div>
+        <div class="wrapper">
+            <div class="offre" id="of1">
+                <div class="info-offre">
+                    <div class="offre-type">Average</div>
+                    <div class="offre-duration">
+                        <div class="time"><i class="fa-regular fa-clock"></i></div>
+                        <div class="ligne"></div>
+                        <div class="durations">2 Months</div>
+                    </div>
+                    <div class="offre-price">38.99$</div>
+                </div>
+                <div class="benefits">
+                    <ul>
+                        <li>One free Product.</li>
+                        <li>50% decrease in delivery price.</li>
+                        <li>Fast delivery for your items.</li>
+                        <li>5% decrease in all items</li>
+                    </ul>
+                    <button class="subscribe" onclick="toggle()">Get</button>
+                </div>
+            </div>
+            <div class="offre" id="of2">
+                <div class="info-offre">
+                    <div class="offre-type">Gold</div>
+                    <div class="offre-duration">
+                        <div class="time"><i class="fa-regular fa-clock"></i></div>
+                        <div class="ligne"></div>
+                        <div class="durations">6 Months</div>
+                    </div>
+                    <div class="offre-price">59.99$</div>
+                </div>
+                <div class="benefits">
+                    <ul>
+                        <li>Two free Product.</li>
+                        <li>75% decrease in delivery price.</li>
+                        <li>Fast delivery for your items.</li>
+                        <li>15% decrease in all items.</li>
+                    </ul>
+                    <button class="subscribe" onclick="toggle()">Get</button>
+                </div>
+            </div>
+            <div class="offre" id="of3">
+                <div class="info-offre">
+                    <div class="offre-type">Premium</div>
+                    <div class="offre-duration">
+                        <div class="time"><i class="fa-regular fa-clock"></i></div>
+                        <div class="ligne"></div>
+                        <div class="durations">1 Year</div>
+                    </div>
+                    <div class="offre-price">98.99$</div>
+
+                </div>
+                <div class="benefits">
+                    <ul>
+                        <li>Five free Product.</li>
+                        <li>Free Delivery.</li>
+                        <li>Fast delivery for your items.</li>
+                        <li>25% decrease in all items</li>
+                    </ul>
+                    <button class="subscribe" onclick="toggle()">Get</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="footer">
+    <img src="sit.png" class="men"/>
+    <img src="3d-business-boy-with-phone.png" class="boy"/>
+        <div class="web-foot">
+            <div class="contact">Contact us on : <span class="email-adress">wearexpro@gmail.com</span></div>
+            <div class="social">
+                <a><i class="fa-brands fa-instagram" id="sm"></i></a>
+                <a><i class="fa-brands fa-facebook" id="sm"></i></a>
+                <a><i class="fa-brands fa-twitter" id="sm"></i></a>
+                <a><i class="fa-brands fa-tiktok" id="sm"></i></a>
+            </div>
+            <div class="shop">
+                <div class="shop-details">
+                    <div class="shop-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="data-shop">49°n Takbou, Medea, Medea, ALGERIA</div>
+                </div>
+                <div class="shop-details">
+                    <div class="shop-icon"><i class="fa-regular fa-clock"></i></div>
+                    <div class="data-shop">8:00 AM To 17:00 AM All Days Expect Sunday</div>
+                </div>
+            </div>
+        </div>
+        <div class="final">
+            <div class="makers">Made by : <a>Akram Mokeddem</a> | <a>Rafik Benbouaicha</a></div>
+            <div class="copyrights">© 2024 Wearex, Inc. All Rights Reserved</div>
+        </div>
+    </div>
+
+<script src="scroll.js" defer id="carousel"></script>
+
 <script>
+    window.addEventListener('scroll', reveal);
 
-    const card = document.querySelector('.flip-card');
-    const btn1 = document.querySelector('.sign');
-    const btn2 = document.querySelector('.log');
-    btn1.addEventListener('click', ()=> {
-        card.style.transform = 'rotateY(180deg)';
-        btn1.style.opacity = '1';
-        btn2.style.opacity = '0.5';
-    })
+    function reveal(){
+        var reveals = document.querySelectorAll('.reveal');
 
-    btn2.addEventListener('click', ()=> {
-        card.style.transform = 'rotateY(360deg)';
-        btn1.style.opacity = '0.5';
-        btn2.style.opacity = '1';
-    })
+        for(var i = 0; i < reveals.length; i++){
+            var windowheight = window.innerHeight;
+            var revealtop = reveals[i].getBoundingClientRect().top;
+            var revealpoint = 150;
+
+            if(revealtop < windowheight - revealpoint){
+                reveals[i].classList.add('active');
+            }
+            else{
+                reveals[i].classList.remove('active');
+            }
+
+        }
+    }
+
+
+document.querySelector('.card-number-input').oninput = () =>{
+document.querySelector('.card-number-box').innerText = document.querySelector('.card-number-input').value;
+}
+
+document.querySelector('.card-holder-input').oninput = () =>{
+    document.querySelector('.card-holder-name').innerText = document.querySelector('.card-holder-input').value;
+}
+
+document.querySelector('.month-input').oninput = () =>{
+    document.querySelector('.exp-month').innerText = document.querySelector('.month-input').value;
+}
+
+document.querySelector('.year-input').oninput = () =>{
+    document.querySelector('.exp-year').innerText = document.querySelector('.year-input').value;
+}
+
+document.querySelector('.cvv-input').onmouseenter = () =>{
+    document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(-180deg)';
+    document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(0deg)';
+}
+
+document.querySelector('.cvv-input').onmouseleave = () =>{
+    document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(0deg)';
+    document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(180deg)';
+}
+
+document.querySelector('.cvv-input').oninput = () =>{
+    document.querySelector('.cvv-box').innerText = document.querySelector('.cvv-input').value;
+}
+
+
+function toggle(){
+    var blur = document.getElementById('blur');
+    blur.classList.toggle('active');
+    var popup = document.getElementById('popup');
+    popup.classList.toggle('active');
+}
+
+function accToggle(){
+    var blur = document.getElementById('blur');
+    blur.classList.toggle('on');
+    var popup = document.getElementById('AccPopup');
+    popup.classList.toggle('active');
+}
+
+function contactToggle(){
+    var blur = document.getElementById('blur');
+    blur.classList.toggle('on');
+    var popup = document.getElementById('contactPopup');
+    popup.classList.toggle('active');
+}
+
+
+
+function filter(){
+    const product1 = document.getElementById('prod1');
+    const product2 = document.getElementById('prod2');
+    const product3 = document.getElementById('prod3');
+    const product4 = document.getElementById('prod4');
+    const product5 = document.getElementById('prod5');
+    const product6 = document.getElementById('prod6');
+    const product7 = document.getElementById('prod7');
+    const product8 = document.getElementById('prod8');
+    var choice = document.getElementById('choice').value;
+    if(choice == "1"){
+        product1.style.display = "block";
+        product2.style.display = "block";
+        product3.style.display = "block";
+        product4.style.display = "block";
+        product5.style.display = "block";
+        product6.style.display = "block";
+        product7.style.display = "block";
+        product8.style.display = "block";
+
+    }
+    if(choice == "2"){
+        product1.style.display = "none";
+        product2.style.display = "block";
+        product3.style.display = "none";
+        product4.style.display = "block";
+        product5.style.display = "block";
+        product6.style.display = "none";
+        product7.style.display = "block";
+        product8.style.display = "none";
+    }
+
+    if(choice == "3"){
+        product1.style.display = "block";
+        product2.style.display = "none";
+        product3.style.display = "none";
+        product4.style.display = "none";
+        product5.style.display = "block";
+        product6.style.display = "none";
+        product7.style.display = "none";
+        product8.style.display = "block";
+    }
+
+    if(choice == "4"){
+        product1.style.display = "block";
+        product2.style.display = "none";
+        product3.style.display = "none";
+        product4.style.display = "block";
+        product5.style.display = "block";
+        product6.style.display = "none";
+        product7.style.display = "none";
+        product8.style.display = "none";
+    }
+
+}
+
+
+
+function filter2(){
+    const product1 = document.getElementById('prod9');
+    const product2 = document.getElementById('prod10');
+    const product3 = document.getElementById('prod11');
+    const product4 = document.getElementById('prod12');
+    const product5 = document.getElementById('prod13');
+    const product6 = document.getElementById('prod14');
+    var choice = document.getElementById('choose').value;
+    if(choice == "1"){
+        product1.style.display = "block";
+        product2.style.display = "block";
+        product3.style.display = "block";
+        product4.style.display = "block";
+        product5.style.display = "block";
+        product6.style.display = "block";
+    }
+    if(choice == "2"){
+        product1.style.display = "block";
+        product2.style.display = "none";
+        product3.style.display = "none";
+        product4.style.display = "none";
+        product5.style.display = "none";
+        product6.style.display = "block";
+    }
+
+    if(choice == "3"){
+        product1.style.display = "none";
+        product2.style.display = "block";
+        product3.style.display = "block";
+        product4.style.display = "none";
+        product5.style.display = "block";
+        product6.style.display = "none";
+    }
+
+    if(choice == "4"){
+        product1.style.display = "block";
+        product2.style.display = "none";
+        product3.style.display = "none";
+        product4.style.display = "block";
+        product5.style.display = "block";
+        product6.style.display = "none";
+    }
+
+}
 
 
 

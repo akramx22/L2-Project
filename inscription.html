@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="FlipCss.css"/>
+    <title>Wearex</title>
+</head>
+<body>
+    <div class="navbar">
+        <button class="home"><ion-icon name="home-outline"></ion-icon></button>
+        <button class="help"><ion-icon name="help-outline"></ion-icon></button>
+    </div>
+    <div class="parts">
+        <button class="log">Log In</button>
+        <button class="sign">Sign Up</button>
+    </div>
+     <div class="card">
+        <div class="flip-card">
+            <div class="login">
+                <div class="title">Welcome Again!</div>
+                <form class="inputs">
+                    <div class="informations">
+                        <span class="mail-icon"><ion-icon name="mail-outline"></ion-icon></ion-icon></span>
+                        <input type="email" class="email" placeholder="Email" required autocomplete="off"/>
+                        <span class="lock-icon"><ion-icon name="lock-closed-outline" class="lock"></ion-icon></span>
+                        <input type="password" class="pass" placeholder="Password" required/>
+                    </div>
+                    <button type="submit">Log In</button>
+                </form>
+                <a href="#" class="go-sign">Forget your password ?</a>
+            </div>
+            <div class="signup">
+                <div class="title">Create Account</div>
+                <form class="inputs" action="pdp.html">
+                    <div class="informations">
+                        <div class="important">
+                            <span class="mail-icon"><ion-icon name="mail-outline"></ion-icon></ion-icon></span>
+                            <input type="email" class="email" placeholder="Email" required autocomplete="off"/>
+                            <span class="lock-icon"><ion-icon name="lock-closed-outline" class="lock"></ion-icon></span>
+                            <input type="password" class="pass" placeholder="Password" required/>
+                        </div>
+                        <div class="other">
+                            <span class="old"><ion-icon name="person-outline"></ion-icon></span>
+                            <span class="down"><ion-icon name="chevron-down-outline"></ion-icon></span>
+                            <input type="text" class="age" placeholder="Age" required autocomplete="off"/>
+                            <div class="country">
+                                <select>
+                                    <option selected hidden>Country</option>
+                                    <option>Us</option>
+                                    <option>Uk</option>
+                                    <option>France</option>
+                                    <option>Egypt</option>
+                                    <option>Algeria</option>
+                                    <option>Colombia</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" class="send" value="Next"/>
+                </form>
+            </div>
+        </div>
+     </div>
+<script>
+
+    const card = document.querySelector('.flip-card');
+    const btn1 = document.querySelector('.sign');
+    const btn2 = document.querySelector('.log');
+    btn1.addEventListener('click', ()=> {
+        card.style.transform = 'rotateY(180deg)';
+        btn1.style.opacity = '1';
+        btn2.style.opacity = '0.5';
+    })
+
+    btn2.addEventListener('click', ()=> {
+        card.style.transform = 'rotateY(360deg)';
+        btn1.style.opacity = '0.5';
+        btn2.style.opacity = '1';
+    })
+
+
+
+</script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
